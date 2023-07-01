@@ -1,0 +1,54 @@
+.button{
+    
+      padding: 0.3em 1em;
+      border: none;
+      outline: none;
+      color: #60553f;
+      background: #AEE6E3;
+      cursor: pointer;
+      position: relative;
+      z-index: 0;                                   
+      border-radius: 5px;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      margin: 6px;
+       
+        font-family: 'Kanit', sans-serif;
+        font-size: 12.5px;
+        letter-spacing: 0px;
+        word-spacing: 0px;
+        font-weight: bolder;
+        text-decoration: dashed;
+        font-style: oblique;
+        font-variant: normal;
+        text-transform: uppercase;
+        
+    }
+
+.button:hover{
+        width: 5vw;
+        height: 2.5vh;
+        transition: 0.5s;
+    }
+
+.search{
+    padding: 0.4em 2em;;
+    border-radius: 5px;
+    border-color: #756951;
+    background-color: #FCFAFB;
+    font-family: 'Kanit', sans-serif;
+    font-size: 12.5px;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    font-weight: bolder;
+    text-decoration: dashed;
+    font-style: oblique;
+    font-variant: normal;
+    text-transform: lowercase;
+    margin: 3px;
+    position: relative;
+    
+        
+}
+

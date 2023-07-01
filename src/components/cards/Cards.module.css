@@ -1,0 +1,9 @@
+.div{
+    width: 99vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+}

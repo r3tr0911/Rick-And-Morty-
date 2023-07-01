@@ -1,15 +1,10 @@
-import Card from './Card';
+import Card from '../card/Card.jsx';
+import style from './Cards.module.css';
 
 export default function Cards(props) {
-
- 
-   
-   
    
    return (
-      <div>
-         <input type='search' placeholder='Busca un personaje...' />
-         <button onClick={props.oneSearch}>Agreagar</button>
+      <div className={style.div}>
          {props.characters.map((personaje)=> (
             <Card
             key = {personaje.id}
@@ -20,11 +15,10 @@ export default function Cards(props) {
             origin = {personaje.origin.name}
             image = {personaje.image}
             onClose={() => window.alert('Emulamos que se cierra la card')}
-            />
-          
+            />          
          ))}
+         
       </div>
    )
 }
 
-// onClose={() => window.alert('Emulamos que se cierra la card')}
