@@ -1,20 +1,47 @@
 import React from 'react';
 import style from './Card.module.css';
+import { Link } from 'react-router-dom';
 
-const Card =({name,species, onClose,gender,status,origin,image, key}) => {
-   // const {character} = props;
+export default function Card({
+   name,
+   species,
+   onClose,
+   gender,
+   status,
+   origin,
+   image,
+   id,
+ }) {
+   //   console.log(props, "props"); cardInfo
+ 
    return (
       <div className={style.container}>
-         <button className={style.btn} onClick={onClose}>X</button>
+         <button className={style.btn} onClick={()=> onClose(id)}>X</button>
+         <Link to={`/detail/${id}`}>
             <img className={style.img} src={image} alt ={name} />
-            <h2 className={style.name}>{name}</h2>
+         </Link>
+         <h2 className={style.name}>{name}</h2>
 
          <div className={style.data}>
             <h3 className={style.info}>{species}</h3>
             <h3 className={style.info}>{gender}</h3>
+            <h3 className={style.info}>{status}</h3>
+            <h3 className={style.info}>{origin}</h3>
          </div>
-      </div>
+      </div> 
    );
-};
+ }
 
-export default Card
+
+
+
+
+
+
+
+
+
+
+
+
+

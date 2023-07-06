@@ -81,9 +81,7 @@
   color:  #FCFAFB;
   transition: 0.1s;
   
-}.name:hover{
-  opacity: 0.6;
-    }
+}
 
 
 .info{
@@ -93,8 +91,5 @@
   color:  #FCFAFB;
   transition: 0.1s;
 }
-.info:hover{
-    opacity: 0.6;
-  }
 
 
