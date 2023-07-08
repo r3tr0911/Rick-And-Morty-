@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import style from "./Detail.module.css";
 
+
 export default function Detail(){
 const { id } = useParams();
 const [pjDetail, setPjDetail] = useState({})

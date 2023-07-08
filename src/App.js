@@ -6,7 +6,7 @@ import About from './components/About/About.jsx'
 import Detail from './components/Detail/Detail.jsx';
 import axios from "axios"
 import style from './App.module.css';
-// import Cards from './components/cards/Cards.jsx';
+// import Cards from './components/cards/Cards.jsx';  
 
 
 function App() {
