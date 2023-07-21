@@ -9,7 +9,7 @@ const { id } = useParams();
 const [pjDetail, setPjDetail] = useState({})
 
 useEffect(()=> {
-    axios(`https://rickandmortyapi.com/api/character/${id}`)
+    axios(`http://localhost:3001/rickandmorty/detail/${id}`)
     .then(({ data }) => {
     if (data.name) {
        setPjDetail(data);

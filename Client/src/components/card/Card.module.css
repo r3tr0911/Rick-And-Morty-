@@ -1,6 +1,6 @@
 .container{
-    width: 18vw;
-    height: 18vw;
+    width: 20%;
+    height: 40%;
     background-color:#92d6f8 ;
     display: flex;
     flex-direction: column;
@@ -8,7 +8,7 @@
     padding: 0 0 8rem 0;
     position: relative;
     border-radius: 0.4rem;
-    margin: 0.5rem;
+    margin: 1rem;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
     font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
 
@@ -19,6 +19,7 @@
   display: flex;
   width: 100%;
   justify-content: space-around;
+  
 }
 
 
@@ -63,10 +64,13 @@
 
 
 .img{
-    width: 300px;
-    height: 100%;
-    margin: 40px;
-    border-radius: 15px;
+    width: 100%;
+    height: 70%;
+    margin: 60px;
+    margin-top: 35px;
+    margin-left: 2px;
+    margin-right: 10px;
+    border-radius: 8px;
     transition: 0.2s;
 }
 .img:hover{
@@ -77,17 +81,18 @@
 .name{
   font-size: 2rem;
   position: relative;
-  bottom: 6vh;
+  bottom: 8vh;
   color:  #FCFAFB;
   transition: 0.1s;
+  margin: 1%;
   
 }
 
 
 .info{
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   position: relative;
-  bottom: 8.5vh;
+  bottom: 8vh;
   color:  #FCFAFB;
   transition: 0.1s;
 }

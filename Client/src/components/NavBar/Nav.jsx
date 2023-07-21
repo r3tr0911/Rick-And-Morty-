@@ -8,6 +8,7 @@ export default function Nav(props) {
         <div className={style.container}>
             <Link to="/about" className={style.about}>ABOUT</Link>
             <Link to="/home" className={style.home}>HOME</Link>
+            <Link to="/favorites">FAVS💖</Link>
             <SearchBar onSearch={props.onSearch} />
         </div>
     );
