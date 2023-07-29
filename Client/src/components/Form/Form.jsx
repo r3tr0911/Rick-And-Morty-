@@ -1,6 +1,7 @@
 import React from "react";
+import styles from "./Form.module.css";
 import Validation from "./validation";
-// import style from "./Form.module.css"
+
 
 export default function Form(props){
 
@@ -9,7 +10,7 @@ export default function Form(props){
         password: ""
     })
     const [errors, setErros] = React.useState({});
-    const handleChange = event => {
+    const handleChange = (event) => {
         const { name, value } = event.target;
         setUserData({
             ...userData,
@@ -18,34 +19,37 @@ export default function Form(props){
         setErros(Validation({
             ...userData,
             [name]: value
-        }))
+        })
+        )
     }
-    const handleSubmit = event => {
+    const handleSubmit = (event) => {
         event.preventDefault()
         props.login(userData);
     }
     return(
-        <div>
-            <form onSubmit={handleSubmit}>
-                <label>Email: </label>
+        <div className={styles.container}>
+            <form className={styles.form} onSubmit={handleSubmit}>
+                <label className={styles.label}>Email: </label>
                 <input 
+                className={styles.input}
                     placeholder="Email..." 
-                    type="text" name="email" 
+                    type="text" 
+                    name="email" 
                     value={userData.email}
                     onChange={handleChange}
                 />
-                <p> {errors.email ? errors.email : null} </p>
+                <p className={styles.error}>{errors.email && errors.email} </p>
 
-                <label>Password: </label>
-                <input 
+                <label className={styles.label}>Password: </label>
+                <input className={styles.input}
                     placeholder="Password..." 
                     type="password" name="password" 
                     value={userData.password} 
                     onChange={handleChange}
                 />
-                <p> {errors.password ? errors.password : null} </p>
+                <p className={styles.error}>{errors.password && errors.password} </p>
                 <hr/>
-                <button type="submit">Submit</button>
+                <button className={styles.button} type="submit">Submit</button>
             </form>
         </div>
     )

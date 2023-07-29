@@ -5,7 +5,7 @@ import { filterCards, orderCards, reset } from "../../redux/actions/actions"
 import Card from "../card/Card"
 
 
-function Favorites(props){
+export default function Favorites(){
 
     const favorites = useSelector((state) => state.favorites);
     const dispatch = useDispatch();
@@ -61,10 +61,4 @@ function Favorites(props){
     )
 }
 
-export function mapStateToProps(state){
-    return {
-        favorites: state.favorites 
-    }
-}
 
-export default connect(mapStateToProps)(Favorites)

@@ -12,21 +12,74 @@ import Favorites from './components/Favorites/Favorites.jsx';
 
 
 function App() {
-   function onSearch(dato) {
-      axios(`http://localhost:3001/rickandmorty/onSearch/${dato}`)
-      .then((respuesta) => {
-         if (respuesta.data.name) {
+   const navigate = useNavigate();
+   const [access, setAccess] = useState(false);
+
+   function logout() {
+      setAccess(false);
+    }
+
+   async function login(userData) {
+    const { email, password } = userData;
+    const URL = "http://localhost:3001/user/login/";
+    try {
+      const backendLogin = await axios(
+         URL + `?email=${email}&password=${password}`
+      );
+      const { data } = backendLogin;
+      const { access } = data;
+      setAccess(access);
+      access && navigate("/home")
+    } catch (error) {
+      
+    }
+   //  axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+   //    const { access } = data;
+   //    setAccess(access);
+   //    access && navigate("/home");
+   //  });
+  }
+
+  useEffect(() => {
+     !access && navigate('/');
+  }, [access]);
+
+
+   async function onSearch(dato) {
+      // axios(`http://localhost:3001/character/${dato}`)
+      // .then((respuesta) => {
+      //    if (respuesta.data.name) {
+      //       // antes de agregar busco si "ya existe". Como lo harias?
+      //     // tu codigo aquí:
+      //     if (characters.some((char) => char.id === respuesta.data.id)) {
+      //       return window.alert("Este personaje ya existe!")
+      //    }  
+      //       setCharacters((oldChars) => [...oldChars, respuesta.data]);
+      //    } else {
+      //       window.alert('¡No hay personajes con este ID!');
+      //    }
+      // })
+      // .catch((err) => alert(err.response.data.error));
+
+      try {
+         const backRequest = await  axios(`http://localhost:3001/character/${dato}`)
+         if (backRequest.data.name) {
             // antes de agregar busco si "ya existe". Como lo harias?
           // tu codigo aquí:
-          if (characters.some((char) => char.id === respuesta.data.id)) {
+          if (characters.some((char) => char.id === backRequest.data.id)) {
             return window.alert("Este personaje ya existe!")
          }  
-            setCharacters((oldChars) => [...oldChars, respuesta.data]);
+            setCharacters((oldChars) => [...oldChars, backRequest.data]);
          } else {
             window.alert('¡No hay personajes con este ID!');
          }
-      })
+      } catch (error) {
+         alert(error.response.data.error)
+      }
+
+
    }
+
    function onClose(id){
       // window.alert("onClose:)")
       setCharacters(
@@ -37,30 +90,13 @@ function App() {
    }
 
    const [characters, setCharacters] = useState([]);
-   
-   const navigate = useNavigate();
-   const [access, setAccess] = useState(false);
-   const EMAIL = 'ejemplo@gmail.com';
-   const PASSWORD = '123456';
-   function login(userData) {
-      if (userData.password === PASSWORD && userData.email === EMAIL) {
-         setAccess(true);
-         navigate('/home');
-      } else{
-         alert("Email o Password incorrecto!")
-      }
-   }
-   useEffect(() => {
-      !access && navigate('/');
-   }, [access]);
-
 
    const location = useLocation();
-   console.log(location.pathname)
+
 
    return (
       <div className={style.App}>
-         {location.pathname !== "/" && <Nav onSearch={onSearch}/>}
+         {location.pathname !== "/" && <Nav onSearch={onSearch} out={logout}/>}
          <Routes> 
             <Route path='/' element={<Form login={login} />}/>
             <Route path='/home' element={<Home characters={characters} onClose={onClose}/>} />

@@ -1,9 +1,9 @@
 .btn{
-    
+      left: -300px;
       padding: 0.3em 1em;
       border: none;
       outline: none;
-      color: #60553f;
+      color: #552758;
       background: #AEE6E3;
       cursor: pointer;
       position: relative;
@@ -33,9 +33,10 @@
     }
 
 .search{
+    left: -300px;
     padding: 0.4em 2em;;
     border-radius: 5px;
-    border-color: #756951;
+    border-color: #020007;
     background-color: #FCFAFB;
     font-family: 'Kanit', sans-serif;
     font-size: 12.5px;

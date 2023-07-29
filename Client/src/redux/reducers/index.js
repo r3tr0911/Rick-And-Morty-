@@ -4,25 +4,36 @@ const initialGlobalState = {
 favorites: [],
 allCharacters: [],
 access: false,
-aunMas: []  
+aunMas: [],
+detail: {}, 
 }
 
 
 export default function rootReducer(state = initialGlobalState, action){
     switch(action.type){
         case ADDFAVORITE:
-            const addPj = [...state.allCharacters, action.payload]
-            return {...state, favorites:addPj, allCharacters: [...addPj]};
+            case ADDFAVORITE:
+                return {
+                  ...state,
+                  favorites: action.payload,
+                  allCharacters: action.payload,
+                };
 
         case DELETEFAVORITE: 
-            return {...state, favorites: state.favorites.filter((fav) => fav.id !== action.payload),
-            allCharacters: state.allCharacters.filter((fav) => fav.id !== action.payload)
-            }
+        return {
+            ...state,
+            favorites: action.payload,
+            allCharacters: action.payload,
+          };
 
 
         case FILTER:
-            return {...state, favorites: state.allCharacters.filter((pj) => pj.gender === action.payload),}
-
+            return {
+                ...state,
+                favorites: state.allCharacters.filter(
+                  (pj) => pj.gender === action.payload
+                ),
+              };
         case ORDER:
             let copy = state.favorites.sort((a, b) => {
                 if(action.payload === "A"){

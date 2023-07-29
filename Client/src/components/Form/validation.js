@@ -9,14 +9,14 @@ export default function Validation (input){
     if(!input.email){
         error.email= "Ingresa un Email!"
     }
-    if(input.email.length > 35){
+    if(input.email > 35){
         error.email = "Debe contener menos de 35 caracteres!"
     }
-    if(regexPassword.test(input.password)){
+    if(!regexPassword.test(input.password)){
         error.password = "Debe tener al menos un numero!"
     }
     if(input.password.length < 6 || input.password.length > 10){
-        error.password = "Debe tener entre 6 y 10 caracteres!0"
+        error.password = "Debe tener entre 6 y 10 caracteres!"
     }
     return error;
 }

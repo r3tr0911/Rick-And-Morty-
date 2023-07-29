@@ -9,15 +9,15 @@ const { id } = useParams();
 const [pjDetail, setPjDetail] = useState({})
 
 useEffect(()=> {
-    axios(`http://localhost:3001/rickandmorty/detail/${id}`)
-    .then(({ data }) => {
-    if (data.name) {
-       setPjDetail(data);
+    axios(`${process.env.REACT_APP_API_DETAIL}${id}`)
+    .then((response) => {
+    if (response.data.name) {
+       setPjDetail(response.data);
     } else {
        window.alert('No hay personajes con ese ID');
     }
    })
- .catch(err=> window.alert("ERROR"));
+ .catch((err)=> window.alert(err));
 
  return () =>{
     console.log('adios!')

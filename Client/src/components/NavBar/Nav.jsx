@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 export default function Nav(props) {
     return (
         <div className={style.container}>
-            <Link to="/about" className={style.about}>ABOUT</Link>
-            <Link to="/home" className={style.home}>HOME</Link>
-            <Link to="/favorites">FAVS💖</Link>
+        <Link to="/about" className={style.about}>ABOUT👽</Link>
+            <Link to="/home" className={style.home}>HOME🏡</Link>
+            <Link to="/favorites" className={style.fav}>FAVS💖</Link>
             <SearchBar onSearch={props.onSearch} />
         </div>
     );
