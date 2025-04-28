@@ -1,4 +1,4 @@
-/* .container{
+.container{
     width: 99vw;
     height: 100vh;
     overflow: hidden;
@@ -6,4 +6,4 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px
-} */
+}

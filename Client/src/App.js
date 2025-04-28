@@ -21,7 +21,8 @@ function App() {
 
    async function login(userData) {
     const { email, password } = userData;
-    const URL = "http://localhost:3001/user/login/";
+   //  const URL = "http://localhost:3001/rickandmorty/login";
+    const URL = "http://localhost:3001/user/login";
     try {
       const backendLogin = await axios(
          URL + `?email=${email}&password=${password}`
