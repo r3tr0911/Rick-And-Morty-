@@ -1,4 +1,4 @@
-require("dotenv").config(); // Agrega al objeto "process" en la prop "env" nuestras variables
+require("dotenv").config(); // Agrega al objeto "process" en la prop "env" muestras variables
 const { PORT, PASSWORD } = process.env;
 const morgan = require("morgan");
 const cors = require("cors");
