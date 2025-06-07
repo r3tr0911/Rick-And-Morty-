@@ -45,22 +45,20 @@ Aplicación web desarrollada en React que consume la API pública de Rick and Mo
 
 1. Clona el repositorio:
 
-    ```bash
-   git clone https://github.com/r3tr0911/rick-and-morty-app.git
+REACT_APP_API_DETAIL=http://localhost:3001/character/
 
-    ```
 2. Instala las dependencias:
-    ```bash
+   
     npm install
-    ```
+
 3. Crea un archivo .env en la raíz del client y agrega:
-    ```bash
+
     REACT_APP_API_DETAIL=http://localhost:3001/character/
-    ```
+    
 4. Inicia la aplicación:
-    ```bash
+  
     npm start
-    ```
+
 ---
 
 🧑‍💻 Autor
