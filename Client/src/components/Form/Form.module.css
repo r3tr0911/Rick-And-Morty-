@@ -1,110 +1,73 @@
 .container {
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    width: 100vw; /* Ancho igual al ancho del viewport */
-    height: 100vh;  
-    /* background-image: url("C:\Users\SN_KN\Desktop\SOFTWARE\HENRY\Bootcamp\Poyecto integrador\rick_and_morty\Client\src\image\wp5960734.jpg"); */
-    background-size: cover;
-    background-position: center center;
-    position: relative;
-    
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
 .form {
-    
-
-    bottom: 0px; /* Ajusta la posición vertical del formulario según tus preferencias */
-    left: 10px;
-    position: absolute;
-    padding: 3.5em 3em;
-    border: none;
-    outline: none;
-    color: #000000;
-    background: #aee6e3a2;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;                                   
-    border-radius: 30px;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    margin: 15px;
-     
-      font-family: 'Kanit', sans-serif;
-      font-size: 15.5px;
-      letter-spacing: 0px;
-      word-spacing: 0px;
-      font-weight: bolder;
-      text-decoration: dashed;
-      font-style: oblique;
-      font-variant: normal;
-      text-transform: uppercase;
-      
-  }
+  background: rgba(174, 230, 227, 0.7);
+  border-radius: 20px;
+  padding: 2.5em 2em;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 340px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  font-family: 'Kanit', sans-serif;
+  color: #000;
+}
 
 .label {
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-style: oblique;
-    font-weight: bolder;
-    text-transform: lowercase;
-    padding: 30px;
-    position: relative;
-    margin: 2px;
+  font-weight: bold;
+  font-style: oblique;
+  text-transform: lowercase;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
 
+.input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #000000;
+  background-color: transparent;
+  font-family: 'Kanit', sans-serif;
+  font-size: 14px;
+  font-weight: bolder;
+  text-transform: lowercase;
+}
 
-    
-  }
-  
-  .input {
-    padding: 0.2em 0.2em;
-    border-radius: 5px;
-    border-color: #000000;
-    background-color: transparent;
-    font-family: 'Kanit', sans-serif;
-    font-size: 12.5px;
-    letter-spacing: 0px;
-    word-spacing: 0px;
-    font-weight: bolder;
-    text-decoration: dashed;
-    font-style: oblique;
-    font-variant: normal;
-    text-transform: lowercase;
-    margin: 10px;
-    position: relative;
-  }
-  .input::placeholder {
-    color: rgba(0, 0, 0, 0.6); 
-  }
+.input::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
 
+.error {
+  color: #b91515;
+  font-size: 12px;
+  margin: 4px 0 8px 0;
+}
 
-  p.error {
-    color:#7d0d0d;
-    margin: 0;
-    font-size: 14px;
-    
-  }
-  
-    
-  button {
- 
-    padding: 8px 10px;
-    background-color: #000100ad;
-    border-color: #ffffff;
-    color: #81fff9;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.button {
+  padding: 10px;
+  margin-top: 18px;
+  background-color: #000100ad;
+  color: #81fff9;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  font-weight: bolder;
+  text-transform: lowercase;
+  font-family: 'Kanit', sans-serif;
+}
 
-    font-family: 'Kanit', sans-serif;
-      font-size: 13.5px;
-      letter-spacing: 0px;
-      word-spacing: 0px;
-      font-weight: bolder;
-      text-decoration: dashed;
-      font-style: oblique;
-      font-variant: normal;
-      text-transform: lowercase;
-  }
-  
+.button:hover {
+  background-color: #1a1a1a;
+  transform: scale(1.05);
+}

@@ -1,12 +1,83 @@
-.container{
-    display: flex;
-    margin: 15px;
-    gap: 20px;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 16px;
 }
 
-.selects{
-    display: flex;
-    height: 25px;
-    margin: 15px;
-    justify-content: center;
+.selects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+/* Estilo para select */
+.selects select {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  font-family: 'Kanit', sans-serif;
+  font-size: 14px;
+  color: #552758;
+  background-color: rgba(166, 238, 230, 0.908);
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 255, 255, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.selects select:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo para botón RESET */
+.selects button {
+  padding: 6px 16px;
+  border-radius: 8px;
+  border: none;
+  font-family: 'Kanit', sans-serif;
+  font-size: 14px;
+  color: white;
+  background-color: #ff6f61;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.selects button:hover {
+  background-color: #e64848;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .selects {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+.cards > *:only-child {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.centerCard {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }

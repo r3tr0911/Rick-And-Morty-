@@ -1,3 +1,88 @@
-.container{
-    background-color: aqua;
-}
+.background {
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding: 60px 0;
+  }
+  
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    color: #000000;
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 16px;
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 24px;
+  }
+  
+  .section {
+    margin-top: 24px;
+    text-align: left;
+  }
+  
+  .section h3 {
+    color: #87f1ff;
+    margin-bottom: 12px;
+  }
+  
+  .section ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .section li {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: #ccf9ff;
+    text-align: left;
+  }
+  
+  .section p {
+    margin: 6px 0;
+    color: #000000;
+  }
+  
+  .section a {
+    color: #9afcfd;
+    text-decoration: none;
+  }
+  
+  .section a:hover {
+    text-decoration: underline;
+    color: #000000;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .container {
+      margin: 30px 16px;
+      padding: 18px;
+    }
+  
+    .title {
+      font-size: 1.6rem;
+    }
+  
+    .description {
+      font-size: 0.95rem;
+    }
+  }
+  

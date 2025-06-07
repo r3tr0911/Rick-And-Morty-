@@ -1,0 +1,72 @@
+# Rick and Morty SPA 💫
+
+Aplicación web desarrollada en React que consume la API pública de Rick and Morty. Permite explorar personajes, agregarlos a favoritos, ver sus detalles, aplicar filtros y mucho más.
+
+---
+
+## 📸 Capturas
+
+### 🏠 Home
+![Home](./screenshots/home.png)
+
+### ❤️ Favoritos
+![Favorites](./screenshots/favorites.png)
+
+### 🧍 Detalle
+![Detail](./screenshots/detail.png)
+
+---
+
+## ⚙️ Tecnologías utilizadas
+
+- ⚛️ React
+- 📦 Redux
+- 💅 CSS Modules
+- ☁️ Axios
+- 💖 SweetAlert2
+- 🔐 Autenticación simple (login)
+- 🌌 Rick and Morty API REST
+
+---
+
+## 🔑 Funcionalidades principales
+
+- Buscar personajes por ID
+- Agregar y quitar personajes de favoritos
+- Visualizar información detallada del personaje
+- Filtro por género
+- Orden ascendente y descendente
+- Autenticación básica (login)
+- Loader personalizado
+- Diseño responsive con efecto glassmorphism
+
+---
+
+## 🛠️ Instalación local
+
+1. Clona el repositorio:
+```bash
+git clone https://github.com/r3tr0911/rick-and-morty-app.git
+```
+2. Instala las dependencias:
+```bash
+npm install
+```
+3. Crea un archivo .env en la raíz del client y agrega:
+```bash
+REACT_APP_API_DETAIL=http://localhost:3001/character/
+```
+4. Inicia la aplicación:
+```bash
+npm start
+```
+---
+
+🧑‍💻 Autor
+Kevin Steven Uribe Lara
+
+📧 kevinesteven0627@gmail.com
+
+🔗 GitHub
+
+💼 LinkedIn
